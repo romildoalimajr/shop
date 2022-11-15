@@ -42,8 +42,8 @@ final dummyProducts = [
   ),
   Product(
     id: 'p6',
-    name: 'Bikini',
-    description: 'Bikini color pin',
+    name: 'Pink Bikini',
+    description: 'Bikini color pink',
     price: 69.99,
     imageUrl:
         'https://cdn.pixabay.com/photo/2016/01/31/12/32/bikini-1171314_960_720.jpg',

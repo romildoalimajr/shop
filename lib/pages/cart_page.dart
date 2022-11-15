@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/components/cart_item.dart';
+import 'package:shop/models/order_list.dart';
 
 import '../models/cart.dart';
 
@@ -14,45 +15,54 @@ class CartPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Carrinho'),
+        title: const Text('Carrinho'),
       ),
       body: Column(
         children: [
           Card(
-            margin: const EdgeInsets.all(25),
+            margin: const EdgeInsets.symmetric(
+              horizontal: 15,
+              vertical: 25,
+            ),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Total',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 20,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Chip(
                     backgroundColor: Theme.of(context).colorScheme.primary,
                     label: Text(
-                      'R\$ ${cart.totalAmount}',
+                      'R\$ ${cart.totalAmount.toStringAsFixed(2)}',
                       style: TextStyle(
                         color:
                             Theme.of(context).primaryTextTheme.headline6?.color,
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   TextButton(
                     style: TextButton.styleFrom(
                       textStyle: TextStyle(
                         color: Theme.of(context).colorScheme.primary,
                       ),
                     ),
-                    onPressed: () {},
-                    child: Text('COMPRAR'),
+                    onPressed: () {
+                      Provider.of<OrderList>(
+                        context,
+                        listen: false,
+                      ).addOrder(cart);
+                      cart.clear();
+                    },
+                    child: const Text('COMPRAR'),
                   ),
                 ],
               ),
