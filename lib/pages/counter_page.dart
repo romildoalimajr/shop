@@ -32,7 +32,7 @@ class _CounterPageState extends State<CounterPage> {
             },
           ),
           IconButton(
-            icon: Icon(Icons.remove),
+            icon: const Icon(Icons.remove),
             onPressed: () {
               setState(() {
                 provider?.state.dec();
