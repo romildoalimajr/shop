@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:shop/models/cart.dart';
 import 'package:shop/models/cart_item.dart';
@@ -8,7 +7,7 @@ import 'package:shop/utils/constants.dart';
 import 'package:http/http.dart' as http;
 
 class OrderList with ChangeNotifier {
-  List<Order> _items = [];
+  final List<Order> _items = [];
 
   List<Order> get items {
     return [..._items];

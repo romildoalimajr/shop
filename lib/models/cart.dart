@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:shop/models/product.dart';
@@ -17,6 +19,7 @@ class Cart with ChangeNotifier {
   double get totalAmount {
     double total = 0.0;
 
+    // ignore: avoid_types_as_parameter_names
     _items.forEach((key, CartItem) {
       total += CartItem.price * CartItem.quantity;
     });

@@ -8,7 +8,9 @@ import '../components/product_grid.dart';
 import '../models/cart.dart';
 
 enum FilterOptions {
+  // ignore: constant_identifier_names
   Favorite,
+  // ignore: constant_identifier_names
   All,
 }
 
@@ -25,6 +27,7 @@ class _ProductsOverviewPageState extends State<ProductsOverviewPage> {
 
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     Provider.of<ProductList>(

@@ -17,6 +17,7 @@ class ProductDetailPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // ignore: sized_box_for_whitespace
             Container(
               height: 300,
               width: double.infinity,

@@ -24,6 +24,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
 
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     _imageUrlFocus.addListener(updateImage);
@@ -31,6 +32,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
 
   @override
   void didChangeDependencies() {
+    // ignore: todo
     // TODO: implement didChangeDependencies
     super.didChangeDependencies();
 
@@ -141,6 +143,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
                         FocusScope.of(context).requestFocus(_priceFocus);
                       },
                       onSaved: (name) => _formData['name'] = name ?? '',
+                      // ignore: no_leading_underscores_for_local_identifiers
                       validator: (_name) {
                         final name = _name ?? '';
 
@@ -167,6 +170,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
                       },
                       onSaved: (price) =>
                           _formData['price'] = double.parse(price ?? '0'),
+                      // ignore: no_leading_underscores_for_local_identifiers
                       validator: (_price) {
                         final priceString = _price ?? '';
                         final price = double.tryParse(priceString) ?? -1;
@@ -185,6 +189,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
                       maxLines: 3,
                       onSaved: (description) =>
                           _formData['description'] = description ?? '',
+                      // ignore: no_leading_underscores_for_local_identifiers
                       validator: (_description) {
                         final description = _description ?? '';
 
@@ -211,6 +216,7 @@ class _ProductFormPageState extends State<ProductFormPage> {
                             onFieldSubmitted: (_) => _submitForm(),
                             onSaved: (imageUrl) =>
                                 _formData['imageUrl'] = imageUrl ?? '',
+                            // ignore: no_leading_underscores_for_local_identifiers
                             validator: (_imageUrl) {
                               final imageUrl = _imageUrl ?? '';
 

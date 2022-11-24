@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shop/exceptions/http_exception.dart';
@@ -22,6 +20,7 @@ class ProductItem extends StatelessWidget {
         backgroundImage: NetworkImage(product.imageUrl),
       ),
       title: Text(product.name),
+      // ignore: sized_box_for_whitespace
       trailing: Container(
         width: 100,
         child: Row(
